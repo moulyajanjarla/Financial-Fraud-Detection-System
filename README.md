@@ -1,16 +1,19 @@
 💰 Financial Fraud Detection System
+
+
 A Financial Fraud Detection System built with Python 3.11, Flask, and Scikit-learn. The system detects fraudulent transactions using a machine learning model trained on the Kaggle Credit Card Fraud Detection Dataset. The API is containerized using Docker for easy deployment.
 
 🚀 Features
+
+
 🔍 Detect fraudulent transactions based on input features
 📊 Machine learning model trained using RandomForestClassifier
 🌐 REST API using Flask
 🐳 Dockerized for seamless deployment
 ⚡ Fast, efficient, and scalable
 🏗️ Project Structure
-graphql
-Copy
-Edit
+
+
 financial-fraud-detection/
 │
 ├── app.py                      # Flask API for fraud prediction
@@ -18,66 +21,67 @@ financial-fraud-detection/
 ├── Dockerfile                   # Docker configuration
 ├── requirements.txt             # Python dependencies
 ├── train_model.ipynb            # Jupyter Notebook for training the model
-└── README.md                    # Project documentation
+└── README.md      
+
+# Project documentation
+
+
 📥 Installation
+
 ✅ 1. Clone the Repository
 bash
 Copy
 Edit
 git clone <your-github-repo-url>
 cd financial-fraud-detection
+
+
+
 ✅ 2. Set Up a Virtual Environment
-bash
-Copy
-Edit
+
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+
+
 ✅ 3. Install Dependencies
-bash
-Copy
-Edit
+
 pip install -r requirements.txt
 ✅ 4. Train the Model
 Run the Jupyter Notebook to train the model:
 
-bash
-Copy
-Edit
+
 jupyter notebook train_model.ipynb
 This will generate the fraud_detection_model.pkl file.
 
 🐳 Docker Setup
 ✅ 1. Build the Docker Image
-bash
-Copy
-Edit
+
 docker build -t fraud-detection-flask .
+
 ✅ 2. Run the Docker Container
-bash
-Copy
-Edit
+
 docker run -d -p 5000:5000 fraud-detection-flask
+
 ✅ 3. Verify Running Containers
-bash
-Copy
-Edit
+
 docker ps
+
+
 🔌 API Endpoints
+
+
 📍 POST /predict
 Request:
 Sends transaction details as features for fraud prediction.
 
-json
-Copy
-Edit
+
 {
   "features": [0.1, -1.2, 0.5, 0.3, 1.5, -0.9, 0.7, -0.6, 0.4, 0.3, 0.1, -1.1, 1.2, 0.0, -0.4, 0.2, 1.3, 0.1, -0.5, 0.4, 0.2, 0.1, -1.0, 1.4, -0.3, 0.1, 0.5, -0.2, 0.3]
 }
 Response:
 
-json
-Copy
-Edit
+
 {
   "fraud_prediction": 0
 }
@@ -86,22 +90,24 @@ Edit
 🛑 Stopping the Docker Container
 List running containers:
 
-bash
-Copy
-Edit
+
 docker ps
 Stop the container:
 
-bash
-Copy
-Edit
+
 docker stop <container_id>
+
 🛠️ Technologies Used
+
+
+
 Python 3.11
 Flask - For building RESTful APIs
 Scikit-learn - Machine Learning
 Docker - Containerization
 Jupyter Notebook - Model training
+
+
 🧑‍💻 Contributing
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
